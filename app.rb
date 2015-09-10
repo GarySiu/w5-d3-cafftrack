@@ -14,9 +14,10 @@ class Cafftrack < Sinatra::Base
   end
 
   post '/drinks' do # create
-    hash = {sauce: 'cheese', name: '4 Cheeses'}
-    @drink = Drink.new hash
+    data = {date: params[:date], quantity: params[:quantity], drink_type: params[:drink_type], location: params[:location]}
+    @drink = Drink.new data
     @drink.save
+    redirect to '/drinks'
   end
 
   get '/drinks/:id' do # show
@@ -28,9 +29,9 @@ class Cafftrack < Sinatra::Base
   end
 
   put '/drinks/:id' do # update
-    hash = {sauce: 'chilli', name: 'Hot! Hot! Hot!'}
+    data = {date: params[:date], quantity: params[:quantity], drink_type: params[:drink_type], location: params[:location]}
     @drink = Drink.find(params[:id])
-    @drink.update hash
+    @drink.update data
   end
 
   delete '/drinks/:id' do # delete

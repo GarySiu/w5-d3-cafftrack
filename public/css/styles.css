@@ -1,0 +1,25 @@
+body {
+  /*background: deeppink;*/
+}
+
+.form-row {
+  padding: 5px 0;
+}
+
+.form-left, .form-right {
+  display: inline-block;
+}
+
+.form-left {
+  width: 50%;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.form-right {
+  text-align: left;
+}
+
+.form-center {
+  text-align: center;
+}
