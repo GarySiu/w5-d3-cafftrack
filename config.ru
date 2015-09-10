@@ -4,6 +4,6 @@ Bundler.require
 
 # Controllers
 require './app'
-require './models/log'
+require './models/drink'
 
 run Cafftrack
